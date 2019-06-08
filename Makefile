@@ -3,7 +3,7 @@
 GIT_HASH := $(shell git rev-parse --short HEAD)
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
-SERVICE := ""
+SERVICE := "minecraft"
 IMAGE := "gcr.io/noobshack-164103/$(SERVICE)"
 
 default: tag
