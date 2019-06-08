@@ -14,6 +14,9 @@ build:
 tag: 
 	docker tag $(IMAGE):$(GIT_HASH) $(IMAGE):latest
 
-push: clean tag
+push: tag
 	docker push $(IMAGE):latest
 	docker push $(IMAGE):$(GIT_HASH)
+
+exec: build tag
+	docker run --rm -it $(IMAGE):$(GIT_HASH) bash
