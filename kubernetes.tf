@@ -32,13 +32,13 @@ resource "kubernetes_deployment" "minecraft" {
 
           resources {
             limits {
-              cpu    = "1"
-              memory = "6Gi"
+              cpu    = "2"
+              memory = "12Gi"
             }
 
             requests {
-              cpu    = "250m"
-              memory = "50Mi"
+              cpu    = "1"
+              memory = "4Gi"
             }
           }
         }
