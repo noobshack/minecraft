@@ -21,5 +21,5 @@ push: tag
 exec: build tag
 	docker run --rm -it $(IMAGE):$(GIT_HASH) bash
 
-deploy: build tag
-	bash deploy.sh
+deploy: build tag push
+	terraform apply
